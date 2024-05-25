@@ -269,10 +269,10 @@ function movePiece(movefrom, moveto, castle = false) {
   } else {
     qswsc = false;
   }
-  if(isValidMove(wqueen,58,true,true) || isValidMove(wqueen,59,true,true)){
+  if(isValidMove(bqueen,58,true,true) || isValidMove(bqueen,59,true,true)){
     qswlc = true;
   } else {
-    qsblc = false;
+    qswlc = false;
   }
 
   let audio = new Audio("sounds/move-self.mp3");
@@ -822,6 +822,116 @@ function showAllMoves(movefrom) {
   });
 
   for (i = 0; i < 64; i++) {
+// because castling is not showing
+
+let piece = board[movefrom];
+if (piece == 1) {
+  if (
+    movefrom == 60 &&
+    i == 58 &&
+    whitekingmoves == false &&
+    whiterookhmove == false &&
+    qswlc == false &&
+    kingincheck(0) == false
+  ) {
+    let squareunderattack = false;
+    for (let j = 58; j <= 60; j++) {
+      // console.log(i,"under attack",issquareunderattack(i,1));
+      // console.log(i);
+      if (issquareunderattack(j, 1) == true) {
+        squareunderattack = true;
+      }
+    }
+    if (
+      !squareunderattack &&
+      board[59] == 0 &&
+      board[58] == 0 &&
+      board[57] == 0
+    ) {
+      let square = document.querySelector(`[data-index="${i}"]`);
+        square.classList.add("highlight");
+      // white can castle long
+    }
+  }
+
+  if (
+    movefrom == 60 &&
+    i == 62 &&
+    whitekingmoves == false &&
+    whiterookhmove == false &&
+    qswsc == false &&
+    kingincheck(0) == false
+  ) {
+    let squareunderattack = false;
+    for (let j = 60; j <= 62; j++) {
+      // console.log(i);
+      // console.log(i,"under attack",issquareunderattack(i,1))
+      if (issquareunderattack(j, 1) == true) {
+        squareunderattack = true;
+      }
+    }
+    if (!squareunderattack && board[61] == 0 && board[62] == 0) {
+      // white can castle short
+      let square = document.querySelector(`[data-index="${i}"]`);
+        square.classList.add("highlight");
+  }
+ }
+}
+
+if (piece == 7) {
+  if (
+    movefrom == 4 &&
+    i == 2 &&
+    blackkingmoves == false &&
+    blackrookamove == false &&
+    qsblc == false &&
+    kingincheck(1) == false
+  ) {
+    let squareunderattack = false;
+    for (let j = 2; j <= 4; j++) {
+      // console.log(i,"under attack",issquareunderattack(i,0))
+      // console.log(i);
+      if (issquareunderattack(i, 0) == true) {
+        squareunderattack = true;
+      }
+    }
+    if (
+      !squareunderattack &&
+      board[1] == 0 &&
+      board[2] == 0 &&
+      board[3] == 0
+    ) {
+      let square = document.querySelector(`[data-index="${i}"]`);
+        square.classList.add("highlight");
+      // black can castle long
+    }
+  }
+
+  if (
+    movefrom == 4 &&
+    i == 6 &&
+    blackkingmoves == false &&
+    blackrookhmove == false &&
+    qsbsc == false &&
+    kingincheck(1) == false
+  ) {
+    let squareunderattack = false;
+    for (let j = 5; j <= 6; j++) {
+      // console.log(i,"under attack",issquareunderattack(i,0))
+      // console.log(i);
+      if (issquareunderattack(i, 0) == true) {
+        squareunderattack = true;
+      }
+    }
+    if (!squareunderattack && board[5] == 0 && board[6] == 0) {
+     // black can castle short
+     let square = document.querySelector(`[data-index="${i}"]`);
+        square.classList.add("highlight");
+    }
+  }
+}
+
+
     if (isValidMove(movefrom, i, true, true)) {
       let currentpiece = board[movefrom];
       let destination = board[i];
