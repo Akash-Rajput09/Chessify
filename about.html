@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+        data-bs-theme="dark"
+        style="width: 100%"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Chessify</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Play</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle disabled"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="customizedrop"
+                >
+                  Customize
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#" data-design="default"
+                      >Default</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" data-design="wooden"
+                      >Wooden</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle disabled"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="theme"
+                >
+                  Theme
+                </a>
+                <ul class="dropdown-menu" id="thememenu">
+                  <li>
+                    <a class="dropdown-item" href="#" data-theme="light"
+                      >Light</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" data-theme="dark">Dark</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="about.html"
+                  style="margin-left: 20px"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="aboutbody text-left">
+      <h2 class="display-5 text-center">About Me</h2>
+      <div class="card text-left">
+        <!-- <div class="card-header">
+          Featured
+        </div> -->
+        <div class="card-body">
+          <h5 class="card-title">Akash Rajput</h5>
+          <p class="card-text">
+            Hello, I am a second year B.tech CSE student. Thanks for
+            visiting and playing on Chessify. <br>You can find the source code for
+            this project on my github with the link below. You can contact me
+            through my email. 
+          </p>
+          <a href="#" class="btn btn-tertiary">Source code</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+          rajputakash98r@gmail.com &nbsp; <a href="#" class="link-secondary" style="text-decoration: none; ">Github</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

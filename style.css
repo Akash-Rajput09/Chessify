@@ -1,0 +1,78 @@
+*  {
+    margin: 0;
+    padding: 0;
+   
+    
+}
+.playarea {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 0;
+    border: 5px solid black;
+}
+
+#chessboard div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white {
+    background-color: #f0d9b5;
+}
+
+.black {
+    background-color: #a47956;
+}
+
+.selected {
+    border: 3px solid rgb(66, 172, 202);
+}
+
+.highlight {
+    border: 5px solid rgb(66, 172, 202);
+}
+
+.aboutbody{
+    margin-top: 50px;
+}
+
+.card{
+    margin-top: 20px;
+    
+}
+.alert{
+    height: 60px;
+}
+
+/* because it looked shit on mobile */
+@media (min-width: 1024px) {
+    #chessboard {
+       
+        max-width: none; 
+    }
+
+    #chessboard img {
+        width: 100%;
+        height: 100%;
+    }
+    #chessboard {
+        display: grid;
+        grid-template-columns: repeat(8, 60px);
+        grid-template-rows: repeat(8, 60px);
+        gap: 0;
+    }
+}
+
+  
