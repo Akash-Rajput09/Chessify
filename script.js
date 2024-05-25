@@ -649,7 +649,7 @@ function isValidMove(
         ) {
           let squareunderattack = false;
           for (i = 58; i <= 60; i++) {
-            console.log(i,"under attack",issquareunderattack(i,1));
+            // console.log(i,"under attack",issquareunderattack(i,1));
             // console.log(i);
             if (issquareunderattack(i, 1) == true) {
               squareunderattack = true;
@@ -680,7 +680,7 @@ function isValidMove(
           let squareunderattack = false;
           for (i = 60; i <= 62; i++) {
             // console.log(i);
-            console.log(i,"under attack",issquareunderattack(i,1))
+            // console.log(i,"under attack",issquareunderattack(i,1))
             if (issquareunderattack(i, 1) == true) {
               squareunderattack = true;
             }
@@ -706,7 +706,7 @@ function isValidMove(
         ) {
           let squareunderattack = false;
           for (let i = 2; i <= 4; i++) {
-            console.log(i,"under attack",issquareunderattack(i,0))
+            // console.log(i,"under attack",issquareunderattack(i,0))
             // console.log(i);
             if (issquareunderattack(i, 0) == true) {
               squareunderattack = true;
@@ -736,7 +736,7 @@ function isValidMove(
         ) {
           let squareunderattack = false;
           for (let i = 5; i <= 6; i++) {
-            console.log(i,"under attack",issquareunderattack(i,0))
+            // console.log(i,"under attack",issquareunderattack(i,0))
             // console.log(i);
             if (issquareunderattack(i, 0) == true) {
               squareunderattack = true;
