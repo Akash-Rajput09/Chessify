@@ -1,3 +1,4 @@
+// completed version
 let chesspieces = {
   1: "whiteking",
   2: "whitequeen",
@@ -114,6 +115,9 @@ function onPieceClick() {
           `[data-index="${selectedPieceIndex}"]`
         );
         previousSelectedSquare.classList.remove("selected");
+        document.querySelectorAll(".selected").forEach((element) => {
+          element.classList.remove("selected");
+        });
       }
       selectedPiece = piece;
       selectedPieceIndex = index;
@@ -134,6 +138,9 @@ function onPieceClick() {
           `[data-index="${selectedPieceIndex}"]`
         );
         previousSelectedSquare.classList.remove("selected");
+        document.querySelectorAll(".selected").forEach((element) => {
+          element.classList.remove("selected");
+        });
       }
       selectedPiece = piece;
       selectedPieceIndex = index;
@@ -306,7 +313,9 @@ function movePiece(movefrom, moveto, castle = false) {
     totalmoves += 1;
     
     lastmove = [movefrom, moveto, piece];
-
+    // document.querySelectorAll(".selected").forEach((element) => {
+    //   element.classList.remove("selected");
+    // });
     let destination = board[moveto];
     if(piece == 6 || piece == 12 || destination != 0){
       movenotpawnorcapture = 0;
