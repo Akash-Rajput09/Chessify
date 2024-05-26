@@ -891,7 +891,7 @@ if (piece == 7) {
     for (let j = 2; j <= 4; j++) {
       // console.log(i,"under attack",issquareunderattack(i,0))
       // console.log(i);
-      if (issquareunderattack(i, 0) == true) {
+      if (issquareunderattack(j, 0) == true) {
         squareunderattack = true;
       }
     }
@@ -919,7 +919,7 @@ if (piece == 7) {
     for (let j = 5; j <= 6; j++) {
       // console.log(i,"under attack",issquareunderattack(i,0))
       // console.log(i);
-      if (issquareunderattack(i, 0) == true) {
+      if (issquareunderattack(j, 0) == true) {
         squareunderattack = true;
       }
     }
