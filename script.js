@@ -1,4 +1,3 @@
-// completed version
 let chesspieces = {
   1: "whiteking",
   2: "whitequeen",
