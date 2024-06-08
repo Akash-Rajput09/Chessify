@@ -210,13 +210,13 @@ function movePiece(movefrom, moveto, castle = false) {
     if (userchoice == "q") {
       promotedpiece = 2;
     }
-    if (userchoice == "r") {
+    else if (userchoice == "r") {
       promotedpiece = 3;
     }
-    if (userchoice == "b") {
+    else if (userchoice == "b") {
       promotedpiece = 4;
     }
-    if (userchoice == "k") {
+    else if (userchoice == "k") {
       promotedpiece = 5;
     } else {
       promotedpiece = 2;
@@ -230,13 +230,13 @@ function movePiece(movefrom, moveto, castle = false) {
     if (userchoice == "q") {
       promotedpiece = 8;
     }
-    if (userchoice == "r") {
+    else if (userchoice == "r") {
       promotedpiece = 9;
     }
-    if (userchoice == "b") {
+    else if (userchoice == "b") {
       promotedpiece = 10;
     }
-    if (userchoice == "k") {
+    else if (userchoice == "k") {
       promotedpiece = 11;
     } else {
       promotedpiece = 8;
