@@ -1052,6 +1052,13 @@ function isGameOver(result) {
       "9,11,10,8,7,10,11,9,12,12,12,12,12,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,6,6,6,6,6,6,6,3,5,4,2,1,4,5,3",
     ];
     createboard(board,selecteddesign);
+    blackkingmoves = false;
+    whitekingmoves = false;
+    whiterookamove = false;
+    whiterookhmove = false;
+    blackrookamove = false;
+    blackrookhmove = false;
+    // Added this here i might use a better way later.
   },100);
 
  
